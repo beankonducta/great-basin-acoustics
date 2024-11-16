@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Basin Acoustics</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-dark bg-dark fixed-top noise-texture">
+        <div class="container">
+            <a class="navbar-brand" href="#"></a>
+            <div class="nav-container">
+                <div class="menu-button-container">
+                    <button class="navbar-toggler" type="button">
+                        <span class="waveform-bar"></span>
+                        <span class="waveform-bar"></span>
+                        <span class="waveform-bar"></span>
+                        <span class="waveform-bar"></span>
+                        <span class="waveform-bar"></span>
+                    </button>
+                    <span class="menu-text">[MENU]</span>
+                </div>
+                <div class="nav-menu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section noise-texture">
+        <div class="container text-center">
+            <h1 class="fade-in-up">Great Basin Acoustics</h1>
+            <div class="waveform">
+                <!-- We'll generate bars dynamically with JavaScript -->
+            </div>
+            <p class="fade-in-up" style="animation-delay: 0.3s;">Professional Sound Solutions By <a href="#" class="animated-link"><strong>Andrew Goldring</strong></a></p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 noise-texture">
+        <div class="container">
+            <h2 class="text-center mb-4 fade-in-up">About Me</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <p class="fade-in-up" style="animation-delay: 0.2s;">I'm Andrew Goldring, and I specialize in transforming dining spaces into acoustically balanced environments where conversation flows as smoothly as the service. Drawing from my years of experience in professional music production, I bring a uniquely refined approach to restaurant acoustics, understanding that the perfect dining atmosphere requires careful attention to both sound control and ambient energy.</p>
+                    
+                    <p class="fade-in-up" style="animation-delay: 0.4s;">My tailored acoustic solutions address the specific challenges faced by restaurants, bars, and cafes, where hard surfaces and open designs often create unwanted noise reflection. By implementing strategic sound treatment through custom-designed absorption panels, diffusers, and targeted acoustic modifications, I help establishments maintain their aesthetic appeal while creating an intimate atmosphere where patrons can comfortably converse without competing with excessive ambient noise or experiencing sound fatigue. Whether you're operating a bustling downtown restaurant or a cozy neighborhood café, I have the expertise to optimize your space's acoustic profile.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Examples Section -->
+    <section id="work" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4 fade-in-up">My Work</h2>
+            <div id="workCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/ag_1.jpg" class="d-block w-100" alt="Copper Vine Restaurant">
+                        <div class="carousel-caption bg-dark bg-opacity-75">
+                            <h3>Copper Vine Restaurant</h3>
+                            <p>Custom fabric-wrapped acoustic panels were seamlessly integrated into the dining room's design, complemented by strategically placed wooden diffusers that maintain the restaurant's rustic aesthetic while reducing noise reflection.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/ag_2.jpg" class="d-block w-100" alt="Salt & Sage Bistro">
+                        <div class="carousel-caption bg-dark bg-opacity-75">
+                            <h3>Salt & Sage Bistro</h3>
+                            <p>A combination of suspended acoustic clouds and wall-mounted art panels created an elegant solution for this high-ceiling space, dramatically improving speech intelligibility while preserving the modern industrial charm.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#workCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#workCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 fade-in-up">Contact Me</h2>
+            <div class="row">
+                <div class="col-lg-6 mx-auto text-center mb-4">
+                    <p class="h4 mb-3">XXX-XXX-XXXX</p>
+                    <p class="h4 mb-4">contact@greatbasinacoustics.com</p>
+                </div>
+                <div class="col-lg-6 mx-auto">
+                    <div id="successMessage" class="alert alert-subtle d-none fade-in-up">
+                        Thanks! I'll get back to you as soon as possible. 😊
+                    </div>
+                    <form id="contactForm" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Name" required 
+                                   pattern=".{2,}" title="Please enter at least 2 characters">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Message" required 
+                                     minlength="10"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="submitButton" disabled>
+                            <span class="button-text">Send Message</span>
+                            <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 noise-texture">
+        <div class="container text-center">
+            <p>&copy; 2024 Great Basin Acoustics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Add this script -->
+    <script>
+        function createWaveform() {
+            const waveform = document.querySelector('.waveform');
+            const numberOfBars = 200;
+
+            for (let i = 0; i < numberOfBars; i++) {
+                const bar = document.createElement('div');
+                bar.className = 'bar';
+                bar.style.animationDelay = `${Math.random() * 1.2}s`;
+                bar.style.height = `${30 + Math.random() * 70}%`;
+                waveform.appendChild(bar);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', createWaveform);
+
+        // Scroll animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.fade-in-up').forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        // Form validation and submission handler
+        const form = document.getElementById('contactForm');
+        const submitButton = document.getElementById('submitButton');
+        const inputs = form.querySelectorAll('input, textarea');
+
+        function validateForm() {
+            let isValid = true;
+            inputs.forEach(input => {
+                if (!input.checkValidity()) {
+                    isValid = false;
+                }
+            });
+            submitButton.disabled = !isValid;
+        }
+
+        inputs.forEach(input => {
+            input.addEventListener('input', validateForm);
+            input.addEventListener('blur', validateForm);
+        });
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const button = document.getElementById('submitButton');
+            const buttonText = button.querySelector('.button-text');
+            const spinner = button.querySelector('.spinner-border');
+            
+            button.disabled = true;
+            buttonText.textContent = 'Sending...';
+            spinner.classList.remove('d-none');
+            
+            setTimeout(() => {
+                this.style.opacity = '0';
+                this.style.height = '0';
+                this.style.overflow = 'hidden';
+                
+                document.getElementById('successMessage').classList.remove('d-none');
+                
+                this.reset();
+                
+                button.disabled = false;
+                buttonText.textContent = 'Send Message';
+                spinner.classList.add('d-none');
+            }, 1500);
+        });
+
+        // Add this to your existing scripts
+        document.querySelector('.navbar-toggler').addEventListener('click', function() {
+            if (window.innerWidth < 768) {
+                document.querySelector('.nav-menu').classList.toggle('show');
+            }
+        });
+    </script>
+</body>
+</html> 
